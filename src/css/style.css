@@ -1,0 +1,98 @@
+body {
+    background-image:url(/src/image/background-image.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.btn_start {
+    top: 50%;    
+}
+
+.btn_start,
+.result_card .card,
+.question_card .card .card-body .option_group,
+.question_card .card .card-body .question_text .card-text,
+.question_card .card {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.result_card .card,
+.question_card .card {
+    width: 550px;
+    top: 50%;
+    opacity: 0;
+    pointer-events: none;
+    
+}
+
+.result_card .card.active,
+.question_card .card.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.4s;
+}
+
+.result_card .card .card-header,
+.question_card .card .card-header {
+    background-color:aquamarine;
+    font-size: 20px;
+}
+
+.result_card .card .card-body,
+.question_card .card .card-body {
+    height: 350px;
+}
+
+.question_card .card .card-body .question_text .card-text {
+    font-size: 50px;
+    top: 35%;
+}
+
+.result_card .card .card-body .result_text .card-text {
+    font-size: 28px;
+    top: 35%;
+}
+
+.result_card .card .card-body .icon {
+    font-size: 80px;
+    color:blue;
+    margin-top: 25px;
+}
+
+.question_card .card .card-body .option_group {
+    top: 60%;
+    display: flex;
+    justify-content:space-around;
+    width: 500px;
+}
+
+.question_card .card .card-body .option_group .option {
+    border-style:solid;
+    cursor: pointer;
+    line-height: 35px;
+    width: 150px;
+    text-align: center;
+    border-radius: 20px;
+    background-color:wheat;
+}
+
+.question_card .card .card-body .option_group .option.correct {
+    background-color:greenyellow;
+}
+
+.question_card .card .card-body .option_group .option.incorrect {
+    background-color:red;
+}
+
+.question_card .card .card-body .option_group .option:hover {
+    background-color:whitesmoke;
+    font-size: 18px;
+}
+
+.question_card .card .card-body .option_group .option:active {
+    font-size: 16px;    
+}
